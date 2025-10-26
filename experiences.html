@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore GiroTu's wine and culinary experiences. From wine tastings to cooking classes, find your perfect tour.">
+    <meta name="keywords" content="wine experiences, culinary tours, wine tasting, cooking classes, winery tours">
+
+    <title>Experiences - GiroTu</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./images/GiroTu-Logo.jpg">
+</head>
+
+<body>
+
+    <!-- Page Header with Navbar -->
+    <section class="section"
+        style="position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center; padding-top: 120px; background: var(--primary-color); color: var(--text-light);">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-cup-hot-fill me-2"></i>GiroTu
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-center" id="navbarNav">
+                    <a href="https://www.instagram.com/giro.tu/" target="_blank" rel="noopener noreferrer"
+                        class="navbar-instagram d-inline-block text-center mx-auto my-2"
+                        aria-label="Follow us on Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="experiences.html">Experiences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="private-tours.html">Private Tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="producers-places.html">Producers & Places</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="why-girotu.html">Why GiroTu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header Content -->
+        <div class="container text-center" style="position: relative; z-index: 1;">
+            <h1 class="display-3 fw-bold mb-3 fade-in">Our Experiences</h1>
+            <p class="lead fade-in">Discover unforgettable wine and culinary adventures tailored to your taste</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="container">
+            <div class="filter-buttons fade-in">
+                <button class="filter-btn active" data-filter="all">All Experiences</button>
+                <button class="filter-btn" data-filter="wine-tasting">Wine Tasting</button>
+                <button class="filter-btn" data-filter="culinary">Culinary</button>
+                <button class="filter-btn" data-filter="cooking">Cooking Classes</button>
+                <button class="filter-btn" data-filter="sunset">Sunset Tours</button>
+                <button class="filter-btn" data-filter="full-day">Full Day</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Grid -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Experience Card 1 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="wine-tasting">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?q=80&w=800"
+                                class="card-img-top" alt="Classic Wine Tasting" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Half Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>4
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Classic Wine Tasting Tour</h5>
+                            <p class="card-text">Visit three premium wineries and taste 12+ exceptional wines. Includes
+                                vineyard tours, cellar visits, and expert guidance.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>3 Winery Visits</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>12+ Wine Tastings
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Expert Sommelier
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Small Groups</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$120</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="culinary">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800"
+                                class="card-img-top" alt="Farm-to-Table" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Full Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>8
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Farm-to-Table Culinary Experience</h5>
+                            <p class="card-text">Meet passionate producers, visit organic farms, and enjoy a gourmet
+                                meal prepared with fresh, local ingredients.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Farm & Producer
+                                    Visits</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Gourmet Lunch</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Wine Pairing</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Market Tour</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$180</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="sunset">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?q=80&w=800"
+                                class="card-img-top" alt="Sunset Wine Tour" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Evening</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>3
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Sunset Wine & Cheese Pairing</h5>
+                            <p class="card-text">Experience breathtaking sunset views while enjoying expertly paired
+                                wines and artisanal cheeses at a hilltop winery.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Sunset Viewing</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>6 Wine & Cheese
+                                    Pairings</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Panoramic Views</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Intimate Setting
+                                </li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$95</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="wine-tasting">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=800"
+                                class="card-img-top" alt="Historic Wine Cellar" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Half Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>4
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Historic Wine Cellar Tour</h5>
+                            <p class="card-text">Explore centuries-old wine cellars and taste rare vintages with our
+                                expert sommeliers in historic settings.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Historic Cellars
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Rare Vintages</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Expert Sommelier
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Limited Access</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$150</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 5 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="cooking">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800"
+                                class="card-img-top" alt="Cooking Class" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Full Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>6
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Cooking & Wine Pairing Class</h5>
+                            <p class="card-text">Learn to prepare traditional dishes and pair them with perfect wines
+                                from local chefs and winemakers.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Hands-On Cooking
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Wine Pairing
+                                    Education</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Lunch Included</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Recipe Book</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$165</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 6 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="wine-tasting">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586370434639-0fe43b2d32d6?q=80&w=800"
+                                class="card-img-top" alt="Boutique Winery" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Half Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>5
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Boutique Winery Discovery</h5>
+                            <p class="card-text">Visit small, family-owned boutique wineries producing limited-edition
+                                wines with unique character.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Boutique Wineries
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Meet Winemakers</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Limited Editions
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Cheese Board</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$135</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 7 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="culinary">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800"
+                                class="card-img-top" alt="Gourmet Food Tour" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Half Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>4
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Gourmet Food Tour</h5>
+                            <p class="card-text">Taste your way through local markets, artisan producers, and hidden
+                                culinary gems with a food expert.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Multiple Food Stops
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Artisan Products
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Local Markets</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Food Expert Guide
+                                </li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$110</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 8 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="full-day">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?q=80&w=800"
+                                class="card-img-top" alt="Grand Tour" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Full Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>9
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Grand Wine & Food Tour</h5>
+                            <p class="card-text">The ultimate experience combining wine tastings, gourmet meals, and
+                                visits to premium wineries and producers.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>4 Winery Visits</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Gourmet Lunch &
+                                    Dinner</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>15+ Wine Tastings
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>VIP Access</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$280</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Card 9 -->
+                <div class="col-lg-4 col-md-6 experience-card fade-in" data-category="cooking">
+                    <div class="card card-custom">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=800"
+                                class="card-img-top" alt="Pasta Making" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="badge-custom">Half Day</span>
+                                <span class="text-primary-custom fw-bold"><i class="bi bi-clock-fill me-1"></i>4
+                                    hours</span>
+                            </div>
+                            <h5 class="card-title">Traditional Pasta Making Class</h5>
+                            <p class="card-text">Learn the art of making fresh pasta from scratch with a master chef,
+                                followed by lunch with wine pairings.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Hands-On Class</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Fresh Ingredients
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Lunch Included</li>
+                                <li><i class="bi bi-check-circle-fill text-primary-custom me-2"></i>Take-Home Skills
+                                </li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h4 mb-0 text-primary-custom">$125</span>
+                                <button class="btn btn-learn-more" data-bs-toggle="modal"
+                                    data-bs-target="#bookingModal">Book Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel"><i class="bi bi-calendar-check me-2"></i>Book Your
+                        Experience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation form-custom" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="date" class="form-label">Preferred Date *</label>
+                                <input type="date" class="form-control" id="date" required>
+                                <div class="invalid-feedback">Please select a date.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="guests" class="form-label">Number of Guests *</label>
+                                <select class="form-select" id="guests" required>
+                                    <option value="">Choose...</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5 Guests</option>
+                                    <option value="6+">6+ Guests</option>
+                                </select>
+                                <div class="invalid-feedback">Please select number of guests.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="message" rows="3"
+                                    placeholder="Dietary restrictions, preferences, etc."></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-custom-primary btn-lg w-100">Submit Booking
+                                Request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5><i class="bi bi-cup-hot-fill me-2"></i>GiroTu</h5>
+                    <p>Discover authentic wine and culinary experiences. We create unforgettable journeys through the
+                        finest wineries and local producers.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="experiences.html">Experiences</a></li>
+                        <li><a href="private-tours.html">Private Tours</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Experiences</h5>
+                    <ul>
+                        <li><a href="experiences.html">Wine Tasting Tours</a></li>
+                        <li><a href="experiences.html">Culinary Experiences</a></li>
+                        <li><a href="experiences.html">Cooking Classes</a></li>
+                        <li><a href="experiences.html">Sunset Tours</a></li>
+                        <li><a href="private-tours.html">Private Tours</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="bi bi-geo-alt-fill me-2"></i>123 Wine Street, Napa Valley</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i>info@girotu.com</li>
+                        <li><i class="bi bi-clock-fill me-2"></i>Mon-Sun: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 GiroTu. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+                        Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./js/script.js"></script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/393505882799?text=Hi%20GiroTu%2C%20I%27m%20interested%20in%20learning%20more%20about%20your%20experiences"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <span class="whatsapp-tooltip">WhatsApp us</span>
+        <i class="bi bi-whatsapp"></i>
+    </a>
+</body>
+
+</html>
