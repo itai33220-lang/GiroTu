@@ -121,6 +121,18 @@ img {
     transition: var(--transition);
 }
 
+.navbar-brand i {
+    font-size: 8.8rem;
+}
+
+/* Walking man logo - sized to match text prominence */
+.navbar-brand-icon {
+    width: auto;
+    height: 5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .navbar-brand:hover {
     color: #9a3b27 !important;
     transform: scale(1.05);
@@ -1277,22 +1289,21 @@ img {
 /* ==========================================
    Instagram Icon in Navbar
    ========================================== */
+
+/* Instagram icon - base styles */
 .navbar-instagram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
+    color: var(--text-light) !important;
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 50px;
     transition: var(--transition);
-    text-decoration: none;
     background: transparent;
+    text-decoration: none;
 }
 
 .navbar-instagram:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    color: var(--primary-dark);
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    color: var(--primary-dark) !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
@@ -1302,7 +1313,7 @@ img {
     line-height: 1;
 }
 
-/* Desktop: Instagram between brand and nav items */
+/* Desktop - FIX spacing from brand */
 @media (min-width: 992px) {
     .navbar-collapse {
         display: flex !important;
@@ -1311,9 +1322,10 @@ img {
     }
 
     .navbar-instagram {
-        margin: 0 5px;
-        margin-right: auto;
         order: -1;
+        margin-left: 25px !important;
+        /* DESKTOP FIX - space from brand */
+        margin-right: auto;
     }
 
     .navbar-nav {
@@ -1321,67 +1333,49 @@ img {
     }
 }
 
-/* Mobile: Instagram inside collapsed menu, above Home */
+/* Mobile - FIX Instagram at top of menu */
 @media (max-width: 991px) {
     .navbar-collapse {
         background: rgba(20, 20, 30, 0.95);
         border-radius: 20px;
         padding: 20px;
         margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Instagram icon - minimal size, fits icon only */
+    /* MOBILE FIX - Instagram centered at top */
     .navbar-instagram {
-        /* Typography */
-        color: var(--text-light) !important;
-        font-size: 1.25rem;
-        /* Icon size */
-        font-weight: 500;
-        text-align: center;
-        text-decoration: none;
-
-        /* Spacing - minimal padding around icon */
-        padding: 8px 12px !important;
-        margin: 0.5rem auto;
-
-        /* Layout - shrink to content */
+        position: static !important;
         display: inline-block !important;
         width: auto !important;
-        max-width: fit-content !important;
-
-        /* Appearance */
-        border-radius: 50px;
-        background: transparent !important;
-        transition: all 0.3s ease;
-    }
-
-    /* Hover - white pill wraps icon only */
-    .navbar-instagram:hover {
-        background-color: rgba(255, 255, 255, 0.95) !important;
-        color: var(--primary-dark) !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    }
-
-    .navbar-instagram i {
-        color: inherit;
-        line-height: 1;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* Nav items styling */
-    .nav-link {
+        margin: 0 auto 15px auto !important;
+        padding: 10px 15px;
         text-align: center;
-        margin: 5px 0;
+        order: -1;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        order: 1;
+    }
+
+    .nav-link {
+        margin: 5px auto;
         display: inline-block;
         width: auto;
+        text-align: center;
     }
 }
 
 @media (max-width: 767px) {
     .navbar-instagram {
-        font-size: 0.9rem;
-        padding: 10px 18px !important;
+        font-size: 16px;
+        right: 55px;
+        padding: 6px 10px;
     }
 }
