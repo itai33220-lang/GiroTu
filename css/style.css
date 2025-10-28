@@ -663,6 +663,9 @@ img {
     font-weight: 700;
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .footer ul {
@@ -698,7 +701,7 @@ img {
 }
 
 .footer .social-links a:hover {
-    background: var(--secondary-color);
+    background: #6c757d;
     transform: translateY(-3px);
 }
 
