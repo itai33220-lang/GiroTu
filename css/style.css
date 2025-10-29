@@ -1354,9 +1354,10 @@ img {
         display: inline-block !important;
         width: auto !important;
         margin: 0 auto 15px auto !important;
-        padding: 10px 15px;
+        padding: 10px;
         text-align: center;
         order: -1;
+        transform: translateX(10px) !important;
     }
 
     .navbar-nav {
@@ -1379,6 +1380,6 @@ img {
     .navbar-instagram {
         font-size: 16px;
         right: 55px;
-        padding: 6px 10px;
+        padding: 8px;
     }
 }
