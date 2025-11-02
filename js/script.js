@@ -90,6 +90,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault();
                 event.stopPropagation();
             } else {
+                // Allow booking form to submit to Formspree
+                if (form.id === 'bookingForm') {
+                    // Let the form submit naturally to Formspree
+                    form.classList.add('was-validated');
+                    return true;
+                }
+
+                // For other forms, use custom handling
                 event.preventDefault();
                 handleFormSubmit(form);
             }

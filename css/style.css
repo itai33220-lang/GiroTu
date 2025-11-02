@@ -967,9 +967,9 @@ img {
 }
 
 .modal-header {
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 20px 20px 0 0;
-    background: var(--gradient-1);
+    background: var(--primary-color);
     color: var(--text-light);
 }
 
