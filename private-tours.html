@@ -297,41 +297,48 @@
                             <p class="text-center mb-4">Fill out the form below and we'll create a custom itinerary for
                                 you within 24 hours</p>
 
-                            <form class="needs-validation form-custom" novalidate>
+                            <form id="privateTourForm" action="https://formspree.io/f/mjkpjrzb" method="POST"
+                                class="needs-validation form-custom" novalidate>
+                                <!-- Hidden fields for Formspree configuration -->
+                                <input type="hidden" name="_subject" value="New GiroTu Private Tour Request">
+                                <input type="hidden" name="_template" value="box">
+
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="firstName" class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" required>
+                                        <input type="text" name="firstName" class="form-control" id="firstName"
+                                            required>
                                         <div class="invalid-feedback">Please enter your first name.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="lastName" class="form-label">Last Name *</label>
-                                        <input type="text" class="form-control" id="lastName" required>
+                                        <input type="text" name="lastName" class="form-control" id="lastName" required>
                                         <div class="invalid-feedback">Please enter your last name.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="email" class="form-label">Email *</label>
-                                        <input type="email" class="form-control" id="email" required>
+                                        <input type="email" name="email" class="form-control" id="email" required>
                                         <div class="invalid-feedback">Please enter a valid email.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="phone" class="form-label">Phone *</label>
-                                        <input type="tel" class="form-control" id="phone" required>
+                                        <input type="tel" name="phone" class="form-control" id="phone" required>
                                         <div class="invalid-feedback">Please enter your phone number.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="date" class="form-label">Preferred Date *</label>
-                                        <input type="date" class="form-control" id="date" required>
+                                        <input type="date" name="preferredDate" class="form-control" id="date" required>
                                         <div class="invalid-feedback">Please select a date.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="guests" class="form-label">Number of Guests *</label>
-                                        <input type="number" class="form-control" id="guests" min="1" max="20" required>
+                                        <input type="number" name="numberOfGuests" class="form-control" id="guests"
+                                            min="1" max="20" required>
                                         <div class="invalid-feedback">Please enter number of guests.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="package" class="form-label">Package Interest</label>
-                                        <select class="form-select" id="package">
+                                        <select name="packageInterest" class="form-select" id="package">
                                             <option value="">Select a package...</option>
                                             <option value="essential">Essential</option>
                                             <option value="premium">Premium</option>
@@ -341,7 +348,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="occasion" class="form-label">Special Occasion</label>
-                                        <select class="form-select" id="occasion">
+                                        <select name="specialOccasion" class="form-select" id="occasion">
                                             <option value="">Select occasion...</option>
                                             <option value="birthday">Birthday</option>
                                             <option value="anniversary">Anniversary</option>
@@ -353,14 +360,14 @@
                                     <div class="col-12">
                                         <label for="preferences" class="form-label">Your Preferences & Requirements
                                             *</label>
-                                        <textarea class="form-control" id="preferences" rows="4"
+                                        <textarea name="preferences" class="form-control" id="preferences" rows="4"
                                             placeholder="Tell us about your wine preferences, dietary restrictions, interests, and any special requests..."
                                             required></textarea>
                                         <div class="invalid-feedback">Please tell us about your preferences.</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="budget" class="form-label">Budget Range</label>
-                                        <select class="form-select" id="budget">
+                                        <select name="budgetRange" class="form-select" id="budget">
                                             <option value="">Select budget range...</option>
                                             <option value="500-750">$500 - $750</option>
                                             <option value="750-1000">$750 - $1,000</option>

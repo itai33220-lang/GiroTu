@@ -77,30 +77,36 @@
                     <div class="card card-custom">
                         <div class="card-body p-5">
                             <h2 class="text-primary-custom mb-4">Send Us a Message</h2>
-                            <form class="needs-validation form-custom" novalidate>
+                            <form id="contactForm" action="https://formspree.io/f/mjkpjrzb" method="POST"
+                                class="needs-validation form-custom" novalidate>
+                                <!-- Hidden fields for Formspree configuration -->
+                                <input type="hidden" name="_subject" value="New GiroTu Contact Message">
+                                <input type="hidden" name="_template" value="box">
+
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <label for="firstName" class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" required>
+                                        <input type="text" name="firstName" class="form-control" id="firstName"
+                                            required>
                                         <div class="invalid-feedback">Please enter your first name.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="lastName" class="form-label">Last Name *</label>
-                                        <input type="text" class="form-control" id="lastName" required>
+                                        <input type="text" name="lastName" class="form-control" id="lastName" required>
                                         <div class="invalid-feedback">Please enter your last name.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="email" class="form-label">Email Address *</label>
-                                        <input type="email" class="form-control" id="email" required>
+                                        <input type="email" name="email" class="form-control" id="email" required>
                                         <div class="invalid-feedback">Please enter a valid email.</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="phone" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone">
+                                        <input type="tel" name="phone" class="form-control" id="phone">
                                     </div>
                                     <div class="col-12">
                                         <label for="subject" class="form-label">Subject *</label>
-                                        <select class="form-select" id="subject" required>
+                                        <select name="subject" class="form-select" id="subject" required>
                                             <option value="">Choose a subject...</option>
                                             <option value="general">General Inquiry</option>
                                             <option value="booking">Booking Question</option>
@@ -113,13 +119,14 @@
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label">Your Message *</label>
-                                        <textarea class="form-control" id="message" rows="6" required
+                                        <textarea name="message" class="form-control" id="message" rows="6" required
                                             placeholder="Tell us how we can help you..."></textarea>
                                         <div class="invalid-feedback">Please enter your message.</div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="newsletter">
+                                            <input name="newsletter" class="form-check-input" type="checkbox"
+                                                id="newsletter" value="yes">
                                             <label class="form-check-label" for="newsletter">
                                                 Subscribe to our newsletter for special offers and updates
                                             </label>

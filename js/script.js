@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault();
                 event.stopPropagation();
             } else {
-                // Allow booking form to submit to Formspree
-                if (form.id === 'bookingForm') {
+                // Allow Formspree forms to submit naturally
+                if (form.id === 'bookingForm' || form.id === 'privateTourForm' || form.id === 'contactForm') {
                     // Let the form submit naturally to Formspree
                     form.classList.add('was-validated');
                     return true;
@@ -104,9 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             form.classList.add('was-validated');
         });
-    });
-
-    /* ==========================================
+    });    /* ==========================================
        Handle Form Submission
        ========================================== */
     function handleFormSubmit(form) {
