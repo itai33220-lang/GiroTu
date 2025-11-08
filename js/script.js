@@ -464,6 +464,135 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* ==========================================
+       Piedmont Map Initialization (Leaflet.js)
+       ========================================== */
+    const mapContainer = document.getElementById('piedmontMap');
+    if (mapContainer) {
+        // Initialize map centered on Piedmont wine regions
+        const piedmontMap = L.map('piedmontMap').setView([44.6000, 7.8000], 9);
+
+        // Add map tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(piedmontMap);
+
+        // Define locations with detailed information
+        const girotuLocations = [
+            {
+                name: "Langhe",
+                coords: [44.5833, 8.0333],
+                description: "UNESCO World Heritage wine region, home to Barolo and Barbaresco wines",
+                type: "wine",
+                icon: "🍷"
+            },
+            {
+                name: "Roero",
+                coords: [44.7500, 7.9667],
+                description: "Renowned for Roero DOCG wines and white truffles",
+                type: "wine",
+                icon: "🍷"
+            },
+            {
+                name: "Barbaresco",
+                coords: [44.7258, 8.0828],
+                description: "Historic village producing prestigious Barbaresco wine",
+                type: "wine",
+                icon: "🍷"
+            },
+            {
+                name: "Valle Varaita",
+                coords: [44.5833, 7.1667],
+                description: "Scenic mountain valley with traditional cuisine and Alpine culture",
+                type: "valley",
+                icon: "⛰️"
+            },
+            {
+                name: "Valle Maira",
+                coords: [44.4667, 7.1000],
+                description: "Pristine valley known for authentic mountain gastronomy",
+                type: "valley",
+                icon: "⛰️"
+            }
+        ];
+
+        // Custom marker icons
+        const wineMarkerIcon = L.divIcon({
+            html: '<div style="background-color: #9a3b27; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">🍷</div>',
+            className: 'custom-marker',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        const valleyMarkerIcon = L.divIcon({
+            html: '<div style="background-color: #2d8b4d; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">⛰️</div>',
+            className: 'custom-marker',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        // Add markers for each location
+        girotuLocations.forEach(location => {
+            const marker = L.marker(location.coords, {
+                icon: location.type === 'wine' ? wineMarkerIcon : valleyMarkerIcon
+            }).addTo(piedmontMap);
+
+            // Add popup with styled information
+            marker.bindPopup(`
+                <div style="font-family: 'Poppins', sans-serif; min-width: 200px;">
+                    <h5 style="color: #9a3b27; margin: 0 0 8px 0; font-size: 1.1rem; font-weight: 700;">
+                        ${location.icon} ${location.name}
+                    </h5>
+                    <p style="margin: 0; font-size: 0.9rem; line-height: 1.5; color: #2c3e50;">
+                        ${location.description}
+                    </p>
+                </div>
+            `, {
+                maxWidth: 300,
+                className: 'custom-popup'
+            });
+        });
+
+        // Add a polygon highlighting the wine region triangle (Langhe-Roero-Barbaresco)
+        const wineRegionCoords = [
+            [44.5833, 8.0333],  // Langhe
+            [44.7258, 8.0828],  // Barbaresco
+            [44.7500, 7.9667],  // Roero
+            [44.5833, 8.0333]   // Back to Langhe
+        ];
+
+        L.polygon(wineRegionCoords, {
+            color: '#9a3b27',
+            fillColor: '#9a3b27',
+            fillOpacity: 0.1,
+            weight: 2,
+            dashArray: '5, 10'
+        }).addTo(piedmontMap).bindPopup(`
+            <div style="text-align: center; font-family: 'Poppins', sans-serif;">
+                <h5 style="color: #9a3b27; margin: 0 0 5px 0;">Langhe-Roero Wine Region</h5>
+                <p style="margin: 0; font-size: 0.85rem;">UNESCO World Heritage Site</p>
+            </div>
+        `);
+
+        // Draw line connecting the valleys
+        const valleyCoords = [
+            [44.5833, 7.1667],  // Valle Varaita
+            [44.4667, 7.1000]   // Valle Maira
+        ];
+
+        L.polyline(valleyCoords, {
+            color: '#2d8b4d',
+            weight: 3,
+            opacity: 0.6,
+            dashArray: '10, 5'
+        }).addTo(piedmontMap);
+
+        // Fit map to show all locations with padding
+        const allCoords = girotuLocations.map(loc => loc.coords);
+        piedmontMap.fitBounds(allCoords, { padding: [50, 50] });
+    }
+
+    /* ==========================================
        Initialize on Page Load
        ========================================== */
     console.log('GiroTu Website Loaded Successfully');

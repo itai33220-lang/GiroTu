@@ -9,6 +9,7 @@
     <title>Producers & Places - GiroTu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/jpeg" href="./images/GiroTu-Logo.jpg">
 </head>
@@ -240,6 +241,20 @@
         </div>
     </section>
 
+    <!-- Map Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Piedmont Locations</h2>
+                <p class="subtitle">Explore the wine regions and mountain valleys where we offer unforgettable
+                    experiences</p>
+            </div>
+            <div class="map-container fade-in">
+                <div id="piedmontMap"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -299,6 +314,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="./js/script.js"></script>
 
     <!-- WhatsApp Floating Button -->
